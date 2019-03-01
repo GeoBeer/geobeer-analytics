@@ -25,7 +25,7 @@ if (!require(genderdata)) {
 source(here('functions.R'))
 
 
-setwd(here('Input', 'SwissGIS'))
+setwd(here('..', 'geobeer-private-data', 'SwissGIS'))
 
 # Read all data files
 data <- read_delim('SwissGIS-user-table.csv', delim=';')
