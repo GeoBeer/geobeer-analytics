@@ -24,9 +24,10 @@ if (!require(genderdata)) {
 }
 source(here('functions.R'))
 
+
 # Read all data files
-setwd(here('..', 'geobeer-private-data', 'Tito'))
-in_files <- list.files(path='.', pattern='^tito-geobeer.*\\.csv$', ignore.case=TRUE)
+in_files <- list.files(path=here('..', 'geobeer-private-data', 'Tito'), 
+                       pattern='^tito-geobeer.*\\.csv$', ignore.case=TRUE)
 in_files
 raw_data <- do.call(rbind, lapply(in_files, read_csv))
 
