@@ -16,6 +16,7 @@ if (!require(readr)) {
 }
 source(here('functions.R'))
 
+
 # Ingest data ------------------------------------------------------------------
 
 # Read and combine the (preprocessed) data on the #SwissGIS Twitter list
