@@ -74,7 +74,8 @@ aggregated_data$gender[is.na(aggregated_data$gender)] <-
 rm(gender_data)
 
 # Save resulting data to disks
-write_csv(aggregated_data, here('Results', 'swissgis-aggregated-data.csv'))
+write_csv(aggregated_data, here('..', 'geobeer-private-data', 'SwissGIS', 
+                                'swissgis-aggregated-data.csv'))
 
 # Analyse gender by event and save to disk
 gender_stats_data <- aggregated_data %>%
