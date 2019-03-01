@@ -29,7 +29,8 @@ source(here('functions.R'))
 in_files <- list.files(path=here('..', 'geobeer-private-data', 'Tito'), 
                        pattern='^tito-geobeer.*\\.csv$', ignore.case=TRUE)
 in_files
-raw_data <- do.call(rbind, lapply(in_files, read_csv))
+raw_data <- do.call(rbind, lapply(paste(here('..', 'geobeer-private-data', 'Tito'),
+                                        in_files, sep='/'), read_csv))
 
 
 # Restructure data
