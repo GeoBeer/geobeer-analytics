@@ -1,0 +1,9 @@
+source,gender,count,percentage
+GeoBeer events,female,386,29.176114890400605
+GeoBeer events,male,937,70.82388510959939
+#SwissGIS Twitter list,female,49,18.560606060606062
+#SwissGIS Twitter list,male,215,81.43939393939394
+Geowebforum authors,female,32,16.08040201005025
+Geowebforum authors,male,167,83.91959798994975
+"Geowebforum authors, weighted by number of posts written",female,215,10.184746565608718
+"Geowebforum authors, weighted by number of posts written",male,1896,89.81525343439128
