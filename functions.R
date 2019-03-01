@@ -56,9 +56,11 @@ classify_additional_names <- function(df) {
   # sort the list alphabetically and write it back to the file. This way, names
   # will always be in alphabetical order, no matter what, thus facilitating
   # updating the list in the future.
-  additional_names <- read_csv(file = here('Input', 'Additional-names.csv')) %>%
+  additional_names <- read_csv(file = here('..', 'geobeer-private-data', 'Auxiliary-Data',
+                                           'Additional-names.csv')) %>%
     arrange(firstname)
-  write_csv(additional_names, here('Input', 'Additional-names.csv'))
+  write_csv(additional_names, here('..', 'geobeer-private-data', 'Auxiliary-Data', 
+                                   'Additional-names.csv'))
   
   # Next, create a lower case version of the firstname and remove the firstname
   # variable

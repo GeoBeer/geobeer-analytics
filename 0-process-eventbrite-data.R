@@ -25,7 +25,7 @@ if (!require(genderdata)) {
 source(here('functions.R'))
 
 # Read all data files
-setwd(here('Input', 'Eventbrite'))
+setwd(here('..', 'geobeer-private-data', 'Eventbrite'))
 in_files <- list.files(path='.', pattern='^GeoBeer.*\\.csv$', ignore.case=TRUE)
 in_files
 raw_data <- do.call(rbind, lapply(in_files, read_csv))
@@ -90,7 +90,8 @@ data$gender[data$gender == ""] <- NA
 aggregated_data <- classify_additional_names(data)
 
 # Save resulting data to disks
-write_csv(aggregated_data, here('Results', 'eventbrite-aggregated-data.csv'))
+write_csv(aggregated_data, here('..', 'geobeer-private-data', 'Eventbrite', 
+                                'eventbrite-aggregated-data.csv'))
 
 # Analyse gender by event and save to disk
 gender_stats_data <- aggregated_data %>%
