@@ -20,6 +20,7 @@ if (!require(readr)) {
 }
 source(here('functions.R'))
 
+
 # Ingest data ------------------------------------------------------------------
 
 # Read and combine the (preprocessed) data on the #SwissGIS Twitter list
@@ -37,13 +38,13 @@ geowebforum_post_data <-
 # category anymore
 swissgis_data %<>%
   filter(gender == 'female' | gender == 'male') %>%
-  mutate(percentage = count / sum(count), source='#SwissGIS Twitter list')
+  mutate(percentage = count / sum(count) * 100, source='#SwissGIS Twitter list')
 
 # Aggregate the per-event data in the geobeer_data dataframe
 geobeer_data %<>%
   group_by(gender) %>%
   summarise (count = sum(count)) %>%
-  mutate(percentage = count / sum(count), source='GeoBeer events')
+  mutate(percentage = count / sum(count) * 100, source='GeoBeer events')
 
 # Annotate the source for Geowebforum data
 geowebforum_author_data %<>%
@@ -70,9 +71,6 @@ data$source <- factor(data$source,
                       levels=c('Geowebforum authors,\nweighted by number\nof posts written',
                                'Geowebforum authors', '#SwissGIS Twitter list', 
                                'GeoBeer events'))
-
-data %<>%
-  mutate(percentage = percentage * 100)
 
 
 # Start plotting data ----------------------------------------------------------
