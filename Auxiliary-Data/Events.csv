@@ -1,0 +1,27 @@
+event;event_short;event_numeric;organiser_category;organiser_subcategory;event_type;location;x;y;lat;lon;language_region
+GeoBeer #1;#1;1;Private sector;;GeoBeer;Zürich;;;;;de
+GeoBeer #2;#2;2;Academia;University of applied science;Conference & GeoBeer;Rapperswil;;;;;de
+GeoBeer #3;#3;3;Academia;University of applied science;GeoBeer;Basel;;;;;de
+GeoBeer #4;#4;4;Private sector;;GeoBeer;Zürich;;;;;de
+GeoBeer #5;#5;5;Academia;University;Conference & GeoBeer;Bern;;;;;de
+GeoBeer #6;#6;6;Private sector;;GeoBeer;Lausanne;;;;;fr
+GeoBeer #7;#7;7;Private sector;;GeoBeer;Olten;;;;;de
+GeoBeer #8;#8;8;Private sector;;GeoBeer;Zürich;;;;;de
+GeoBeer #9;#9;9;Private sector;;GeoBeer;Lausanne;;;;;fr
+GeoBeer #10;#10;10;Association;;GeoBeer;Zürich;;;;;de
+GeoBeer #11;#11;11;Canton;;GeoBeer;Zürich;;;;;de
+GeoBeer #12;#12;12;Academia;University of applied science;GeoBeer;Wädenswil;;;;;de
+GeoBeer #13;#13;13;Association;;Conference & GeoBeer;Bern;;;;;de
+GeoBeer #14;#14;14;Association;;Conference & GeoBeer;Zürich;;;;;de
+GeoBeer #15;#15;15;Private sector;;GeoBeer;Zürich;;;;;de
+GeoBeer #16;#16;16;Canton;;GeoBeer;Aarau;;;;;de
+GeoBeer #17;#17;17;Academia;University of applied science;GeoBeer;Muttenz;;;;;de
+GeoBeer #18;#18;18;Canton;;GeoBeer;Zürich;;;;;de
+GeoBeer #19;#19;19;Association;;GeoBeer;Bern;2600279;1199693;46.94847;7.44224;de
+GeoBeer #20;#20;20;Academia;University of applied science;GeoBeer;Rapperswil;2704408;1231214;47.22404;8.81722;de
+GeoBeer #21;#21;21;Private sector;;GeoBeer;Unterägeri;2686706;1221474;47.13891;8.58167;de
+GeoBeer #22;#22;22;Private sector;;GeoBeer;Schaffhausen;2689629;1283463;47.69603;8.63249;de
+GeoBeer #23;#23;23;Academia;University;GeoBeer;Zürich;2683854;1250130;47.39715;8.54942;de
+GeoBeer #24;#24;24;Confederation;;GeoBeer;Bern;2600969;1197450;46.92853;7.45127;de
+GeoBeer #25;#25;25;Canton;;GeoBeer;Bern;2600269;1199956;46.95069;7.44217;de
+GeoBeer #26;#26;26;Private sector;;GeoBeer;Bern;;;;;de
