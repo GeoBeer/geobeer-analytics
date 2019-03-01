@@ -24,10 +24,9 @@ if (!require(genderdata)) {
 }
 source(here('functions.R'))
 
-
 # Read all data files
-setwd(here('Input', 'Tito'))
-in_files <- list.files(path='.', pattern='^tito.*\\.csv$', ignore.case=TRUE)
+setwd(here('..', 'geobeer-private-data', 'Tito'))
+in_files <- list.files(path='.', pattern='^tito-geobeer.*\\.csv$', ignore.case=TRUE)
 in_files
 raw_data <- do.call(rbind, lapply(in_files, read_csv))
 
@@ -125,7 +124,8 @@ rm(gender_data)
 aggregated_data <- classify_additional_names(aggregated_data)
 
 # Save resulting data to disks
-write_csv(aggregated_data, here('Results', 'tito-aggregated-data.csv'))
+write_csv(aggregated_data, here('..', 'geobeer-private-data', 'Tito', 
+                                'tito-aggregated-data.csv'))
 
 # Analyse gender by event and save to disk
 gender_stats_data <- aggregated_data %>%
