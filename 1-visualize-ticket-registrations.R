@@ -20,9 +20,10 @@ if (!require(readr)) {
 }
 source(here('functions.R'))
 
+
 # Ingest data ------------------------------------------------------------------
 
-data <- read_csv(here('Results', 'tito-aggregated-data.csv'))
+data <- read_csv(here('..', 'geobeer-private-data', 'Tito', 'tito-aggregated-data.csv'))
 
 # Do some minor data enrichment and restructuring ------------------------------
 
