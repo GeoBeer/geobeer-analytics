@@ -4,4 +4,4 @@ GeoBeer is an informal meeting of people interested in geography, GIS, cartograp
 
 With GeoBeer, we want to promote ideas and communication. [Follow us on Twitter](https://www.twitter.com/geobeerch), [have a look at our website](http://www.geobeer.ch) or [read our manifesto](https://www.geobeer.ch/manifesto.html).
 
-&rarr; [Back to the main page](index.md)
+&larr; [Back to the main page](index.md)
