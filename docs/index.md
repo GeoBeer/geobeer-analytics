@@ -4,7 +4,7 @@ On this website, we collect analytics of GeoBeer events. We do this for three re
 
 - We hope our findings are of interest to our audience, our presenters, our local partners as well as prospective organisers. 
 - Our findings help us to keep an eye on certain metrics and we want to use them to strive to make GeoBeer events better events.
-- We hope our finding as well as our open-source tools help other organisers to do the same for their events or event series. 
+- We hope our findings as well as our open-source tools help other organisers to do the same for their event or event series. 
 
 While we open our tools and some of our data, we withhold all data that is privacy-sensitive (e.g. any data set containing unaggregated data pertaining to individuals). We do publish data that is non-sensitive, e.g. data aggregated over groups or data representing events.
 
