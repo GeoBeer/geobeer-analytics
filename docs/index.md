@@ -1,5 +1,3 @@
-# GeoBeer Analytics
-
 On this website, we collect analytics of GeoBeer events, for three reasons:
 
 - We hope our findings are of interest to our audience, our presenters, our local organising committees and sponsors as well as prospective organisers. 
