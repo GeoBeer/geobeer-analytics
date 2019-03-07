@@ -1,8 +1,8 @@
 theme: jekyll-theme-minimal
 title: GeoBeer Analytics
-description: A one-pager about analytics of [GeoBeer](http://www.geobeer.ch) events. Hopefully useful also to other tech meetup organisers.
+description: A one-pager about analytics of GeoBeer events. Hopefully useful also to other meetup and event organisers.
 logo: assets/logo-geobeer.png
-show_downloads: "true"
+show_downloads: "false"
 plugins:
   - jekyll-relative-links
 relative_links:
