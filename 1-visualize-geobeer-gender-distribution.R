@@ -78,11 +78,12 @@ ggplot(data, aes(x=event_numeric, y=count, fill=gender)) +
   theme(legend.position='top') +
   labs(title='Size of GeoBeer events and gender balance', 
        subtitle='\nHow many participants of each gender attended GeoBeer events?\n', 
-       caption=str_c('\nbased on ', nrow(data_per_event), ' events'),
+       caption=str_c('\n\n@geobeerch, geobeer.github.io/geobeer-analytics\n\n',
+                     'Based on ', nrow(data_per_event), ' events.'),
        x='\nEvent',
        y='Number of participants\n')
 ggsave(here('Results', 'GeoBeer-gender-balance--absolute--per-event.png'), 
-       width=25, height=16, units='cm')
+       width=25, height=18, units='cm')
 
 # Stacked bar charts of relative counts of gender, per event
 ggplot(data, aes(x=event_numeric, y=percentage, fill=gender)) +
@@ -93,11 +94,12 @@ ggplot(data, aes(x=event_numeric, y=percentage, fill=gender)) +
   theme(legend.position='right') +
   labs(title='Gender balance per GeoBeer event', 
        subtitle='\nWhat were the proportions of female and male participants per GeoBeer event?\n', 
-       caption=str_c('\nbased on ', nrow(data_per_event), ' events; the line represents\nthe overall female participation rate'),
+       caption=str_c('\n\n@geobeerch, geobeer.github.io/geobeer-analytics\n\n',
+                     'Based on ', nrow(data_per_event), ' events. The line represents\nthe overall female participation rate.'),
        x='\nEvent',
        y='Proportion of participants [%]\n')
 ggsave(here('Results', 'GeoBeer-gender-balance--relative--per-event.png'), 
-       width=25, height=16, units='cm')
+       width=25, height=18, units='cm')
 
 # Make the percentages of female participants negative
 # Source: https://stackoverflow.com/questions/14680075/simpler-population-pyramid-in-ggplot2
@@ -113,11 +115,12 @@ ggplot(temp_data, aes(x=as.factor(event_numeric), y=percentage, fill=gender)) +
   coord_flip() +
   labs(title='Gender balance per GeoBeer event', 
        subtitle='\nWhat were the proportions of female and male participants per GeoBeer event?\n', 
-       caption=str_c('\nbased on ', nrow(data_per_event), ' events'),
+       caption=str_c('\n\n@geobeerch, geobeer.github.io/geobeer-analytics\n\n',
+                     'Based on ', nrow(data_per_event), ' events.'),
        x='Event\n',
        y='\nProportion of participants [%]')
 ggsave(here('Results', 'GeoBeer-gender-balance--relative--left-right--per-event.png'), 
-       width=25, height=22, units='cm')
+       width=25, height=25, units='cm')
 
 
 # Scatterplot of percentage of female participants versus absolute event size
@@ -127,11 +130,12 @@ ggplot(data_per_event, aes(x=count, y=female_percentage)) +
   theme_geobeer() +
   labs(title='Size of GeoBeer events and gender balance', 
        subtitle='\nDo bigger GeoBeer events lead to a more balanced gender representation?', 
-       caption=str_c('\nbased on ', nrow(data_per_event), ' events'),
+       caption=str_c('\n\n@geobeerch, geobeer.github.io/geobeer-analytics\n\n',
+                     'Based on ', nrow(data_per_event), ' events.'),
        x='\nSize of event (number of participants)',
        y='Proportion of female participants [%]\n')
 ggsave(here('Results', 'GeoBeer-gender-balance-vs-size--per-event.png'), 
-       width=25, height=18, units='cm')
+       width=25, height=20, units='cm')
 
 # Treemap with gender balance per event
 ggplot(data_per_event, aes(x=count, y=female_percentage)) +
@@ -141,11 +145,12 @@ ggplot(data_per_event, aes(x=count, y=female_percentage)) +
   scale_y_continuous(limits=c(0, 100)) +
   labs(title='Size of GeoBeer events and gender balance', 
        subtitle='\nDo bigger GeoBeer events lead to a more balanced gender representation?', 
-       caption=str_c('\nbased on ', nrow(data_per_event), ' events'),
+       caption=str_c('\n\n@geobeerch, geobeer.github.io/geobeer-analytics\n\n',
+                     'Based on ', nrow(data_per_event), ' events.'),
        x='\nSize of event (number of participants)',
        y='Proportion of female participants [%]\n')
 ggsave(here('Results', 'GeoBeer-gender-balance-vs-size--per-event--complete-canvas.png'), 
-       width=25, height=18, units='cm')
+       width=25, height=20, units='cm')
 
 if (!require(treemapify)) {
   install.packages('treemapify')

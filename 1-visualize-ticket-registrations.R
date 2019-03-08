@@ -66,7 +66,7 @@ ggplot(data, aes(x=event, y=duration_median_hours)) +
         axis.title = element_text(size = rel(1.2))) +
   labs(title="Time until half of a GeoBeer’s tickets are gone", 
        subtitle='\nHow many hours does it take until 50% of the tickets are registered? We look at the time until half\nof the tickets are gone, since the complete data contains cancelled and re-issued tickes – something\nwe do right up to the event\n\n', 
-       caption='',
+       caption='\n\n@geobeerch, geobeer.github.io/geobeer-analytics',
        x='\nEvent',
        y='Hours\n')
 ggsave(here('Results', 'GeoBeer-ticket-registration-times--per-event.png'), 

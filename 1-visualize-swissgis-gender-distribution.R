@@ -48,11 +48,12 @@ ggplot(data, aes(x='', y=count, fill=gender)) +
   theme(legend.position='top') +
   labs(title='Gender balance of the #SwissGIS Twitter list', 
        subtitle='\nHow many Twitter accounts of each gender are on #SwissGIS?\n', 
-       caption=str_c('\nbased on www.twitter.com/rastrau/lists/swissgis'),
+       caption=str_c('\n\n@geobeerch, geobeer.github.io/geobeer-analytics\n\n',
+                     'Based on www.twitter.com/rastrau/lists/swissgis.'),
        x='\n',
        y='\nNumber of accounts\n')
 ggsave(here('Results', 'SwissGIS-gender-balance--absolute--all-categs.png'), 
-       width=25, height=10, units='cm')
+       width=25, height=12, units='cm')
 
 # Stacked bar charts of relative counts of gender (only male/female categories)
 ggplot(data, aes(x='', y=percentage, fill=gender)) +
@@ -64,11 +65,12 @@ ggplot(data, aes(x='', y=percentage, fill=gender)) +
   theme(legend.position='top') +
   labs(title='Gender balance of the #SwissGIS Twitter list', 
        subtitle='\nWhat are the proportions of female and male Twitter accounts?\n', 
-       caption=str_c('\nbased on www.twitter.com/rastrau/lists/swissgis'),
+       caption=str_c('\n\n@geobeerch, geobeer.github.io/geobeer-analytics\n\n',
+                     'Based on www.twitter.com/rastrau/lists/swissgis.'),
        x='\n',
        y='\nProportion of accounts [%]')
 ggsave(here('Results', 'SwissGIS-gender-balance--relative--all-categs.png'), 
-       width=25, height=10, units='cm')
+       width=25, height=12, units='cm')
 
 # Stacked bar charts of absolute counts of gender (all categories)
 ggplot(data_clean, aes(x='', y=count, fill=gender)) +
@@ -79,11 +81,12 @@ ggplot(data_clean, aes(x='', y=count, fill=gender)) +
   theme(legend.position='top') +
   labs(title='Gender balance of the #SwissGIS Twitter list', 
        subtitle='\nHow many Twitter accounts of each gender are on #SwissGIS?\n', 
-       caption=str_c('\nbased on www.twitter.com/rastrau/lists/swissgis'),
+       caption=str_c('\n\n@geobeerch, geobeer.github.io/geobeer-analytics\n\n',
+                     'Based on www.twitter.com/rastrau/lists/swissgis.'),
        x='\n',
        y='\nNumber of accounts')
 ggsave(here('Results', 'SwissGIS-gender-balance--absolute.png'), width=25, 
-       height=10, units='cm')
+       height=12, units='cm')
 
 # Stacked bar charts of relative counts of gender (only male/female categories)
 ggplot(data_clean, aes(x='', y=percentage, fill=gender)) +
@@ -94,9 +97,10 @@ ggplot(data_clean, aes(x='', y=percentage, fill=gender)) +
   theme(legend.position='top') +
   labs(title='Gender balance of the #SwissGIS Twitter list', 
        subtitle='\nWhat are the proportions of female and male Twitter accounts?\n', 
-       caption=str_c('\nbased on www.twitter.com/rastrau/lists/swissgis'),
+       caption=str_c('\n\n@geobeerch, geobeer.github.io/geobeer-analytics\n\n',
+                     'Based on www.twitter.com/rastrau/lists/swissgis.'),
        x='\n',
        y='\nProportion of accounts [%]')
 ggsave(here('Results', 'SwissGIS-gender-balance--relative.png'), width=25, 
-       height=10, units='cm')
+       height=12, units='cm')
 

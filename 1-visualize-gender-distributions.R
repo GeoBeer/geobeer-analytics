@@ -86,10 +86,10 @@ ggplot(data, aes(x=source, y=percentage, fill=gender)) +
   coord_flip() +
   labs(title='Gender balances in GIS in Switzerland', 
        subtitle='\nWhat are the proportions of female and male representation in different channels?', 
-       caption=str_c('\nbased on GeoBeer events, www.twitter.com/rastrau/lists/swissgis,\ngeowebforum.ch and github.com/rastrau/geowebforum-scraper'),
+       caption=str_c('\n\n@geobeerch, geobeer.github.io/geobeer-analytics\n\n',
+                     'Based on GeoBeer data, the #SwissGIS list at twitter.com/rastrau/lists/swissgis,\n',
+                     'and data about geowebforum.ch via github.com/rastrau/geowebforum-scraper.'),
        x='',
        y='\nProportion of participants/accounts [%]')
-ggsave(here('Results', 'Gender-balances--relative.png'), width=25, height=15, 
+ggsave(here('Results', 'Gender-balances--relative.png'), width=25, height=16, 
             units='cm')
-
-
