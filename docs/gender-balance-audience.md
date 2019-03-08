@@ -1,7 +1,7 @@
 # Gender balance of our audience
 
 ## Background and rationale
-Based on event registration data from the [Eventbrite](http://www.eventbrite.com) (old) and the [Ti.to](http://ti.to) (current) platform, we analysed the gender of audience members by looking at the first names they gave for registering to GeoBeer events. Specifically, we analysed (in sequential order, if the previous approaches haven't yielded a result): 
+Based on event registration data from the [Eventbrite](http://www.eventbrite.com) (old) and the [Ti.to](http://ti.to) (current) platform, we analysed the gender of audience members by looking at the first names they gave for registering to GeoBeer events. Specifically, we analysed (in sequential order, only if the previous approaches haven't yielded a result): 
 
 - first names 
 - a small fraction of &laquo;last names&raquo; when people may have flipped their first and last names in the form fields 
