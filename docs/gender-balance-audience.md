@@ -12,7 +12,7 @@ Lastly, we manually classified a few names that wouldn't yield results otherwise
 Several disclaimers are in order as there are simplifications, inherent shortcomings, and potential pitfalls with this type of analysis:
 
 - The analysis relies on functionality provided by the R package `gender` (and its supplementary package `genderdata`) ([link to documentation](https://cran.r-project.org/web/packages/gender)). 
-- Gender classification in `gender`is based on historical data from the U.S. Social Security Administration birth record data. As such, the classification will have certain biases, e.g. when classifying first names which may have different typically associated genders in different cultures.
+- Gender classification in `gender` is based on historical data from the U.S. Social Security Administration birth record data. As such, the classification will have certain biases, e.g. when classifying first names which may have different typically associated genders in different cultures.
 - Of course, besides people who identify as gender-binary there are non-binary (or genderqueer) persons. Further, some cultures know more than two genders. Unfortunately, data-driven analyses cannot adequately capture all gender categories.
 - For classifying gender based on first name using `gender`, a range of birth years has to be supplied. As we do not capture any such information from our audience members, we used the timeframe between 1950 and 2000. This may be representative of our audience, or not.
 
@@ -32,14 +32,14 @@ Several disclaimers are in order as there are simplifications, inherent shortcom
 
 ## Analysis
 The data processing for these visualisations was done using the following R-scripts:
-[0-process-eventbrite-data.R](https://github.com/GeoBeer/geobeer-analytics/blob/master/0-process-eventbrite-data.R)
-[0-process-tito-data.R](https://github.com/GeoBeer/geobeer-analytics/blob/master/0-process-tito-data.R)
-[0-process-swissgis-data.R](https://github.com/GeoBeer/geobeer-analytics/blob/master/0-process-swissgis-data.R)
-[0-process-geowebforum-data.R](https://github.com/GeoBeer/geobeer-analytics/blob/master/0-process-geowebforum-data.R)
+- [0-process-eventbrite-data.R](https://github.com/GeoBeer/geobeer-analytics/blob/master/0-process-eventbrite-data.R)
+- [0-process-tito-data.R](https://github.com/GeoBeer/geobeer-analytics/blob/master/0-process-tito-data.R)
+- [0-process-swissgis-data.R](https://github.com/GeoBeer/geobeer-analytics/blob/master/0-process-swissgis-data.R)
+- [0-process-geowebforum-data.R](https://github.com/GeoBeer/geobeer-analytics/blob/master/0-process-geowebforum-data.R)
 
-geowebforum.ch data was obtained using the [geowebforum-scraper](https://github.com/rastrau/geowebforum-scraper) by [Ralph](https://www.twitter.com/rastrau).
+The data on geowebforum.ch was obtained using the [geowebforum-scraper](https://github.com/rastrau/geowebforum-scraper) by [Ralph](https://www.twitter.com/rastrau).
 
-The visualisations themselves were made using the following R-scripts:
+The visualisations were made using the following R-scripts:
 
 - [1-visualize-geobeer-gender-distribution.R](https://github.com/GeoBeer/geobeer-analytics/blob/master/1-visualize-geobeer-gender-distribution.R)
 - [1-visualize-gender-distributions.R](https://github.com/GeoBeer/geobeer-analytics/blob/master/1-visualize-gender-distributions.R)
