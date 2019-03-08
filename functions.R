@@ -9,12 +9,12 @@ theme_geobeer <- function() {
   theme_minimal() +
     theme(
       text = element_text(color = "#22211d"),
-      plot.title = element_text(lineheight=1, size = rel(2.1), family='serif', face='bold'),
+      plot.title = element_text(lineheight=1, size = rel(2.1), face='bold'),
       plot.subtitle = element_text(size = rel(1.2), lineheight=1),
       plot.caption = element_text(size = rel(0.7)),
       plot.background = element_rect(fill = '#FAFAFA', colour=NA),
       legend.position = 'top',
-      plot.margin = margin(5, 5, 5, 5, 'mm'))
+      plot.margin = margin(10, 5, 5, 5, 'mm'))
 }
 
 theme_geobeer_horbar <- function() {
@@ -42,8 +42,9 @@ legend_theme <- guide_legend(
   direction = "horizontal",
   keyheight = unit(5, units = "mm"),
   keywidth = unit(12, units = "mm"),
-  title.position = "top",
+  title.position = "left",
   title.hjust = 0.5,
+  title.vjust = 0.85,
   label.hjust = 0.5,
   byrow = T,
   label.position = "bottom"
