@@ -12,7 +12,7 @@ Based on event registration data from the [Ti.to](http://ti.to)-platform, we ana
 Both these issues would affect the complete analysis in a way that would strongly overestimate the time until tickets are gone.
 
 ## Results
-![Ticket registration times per event](https://github.com/GeoBeer/geobeer-analytics/raw/master/Results/GeoBeer-ticket-registration-times--per-event.png)
+[![Ticket registration times per event](https://github.com/GeoBeer/geobeer-analytics/raw/master/Results/GeoBeer-ticket-registration-times--per-event.png)](https://github.com/GeoBeer/geobeer-analytics/raw/master/Results/GeoBeer-ticket-registration-times--per-event.png)
 
 ## Analysis
 This analysis was done using the R-script [1-visualize-ticket-registrations.R](https://github.com/GeoBeer/geobeer-analytics/blob/master/1-visualize-ticket-registrations.R). It is compatible with data exported from [Ti.to](http://ti.to) (but shouldn't be too complicated to adapt for other ticketing platforms as long as they provide a timestamp when a ticket was issued). If, like us, you want to analyse several events at once, aggregate the Ti.to data by concatenating records from your per-event CSV files into just one aggregate file before running the analysis.
