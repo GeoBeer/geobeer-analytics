@@ -18,3 +18,10 @@ Both these issues would affect the complete analysis in a way that would strongl
 This analysis was done using the R-script [1-visualize-ticket-registrations.R](https://github.com/GeoBeer/geobeer-analytics/blob/master/1-visualize-ticket-registrations.R). It is compatible with data exported from [Ti.to](http://ti.to) (but shouldn't be too complicated to adapt for other ticketing platforms as long as they provide a timestamp when a ticket was issued). If, like us, you want to analyse several events at once, aggregate the Ti.to data by concatenating records from your per-event CSV files into just one aggregate file before running the analysis.
 
 &larr; [Back to the main page](index.md)
+
+&rarr; Look at [our analysis of the event locations](locations.md)
+
+&rarr; Look at [our analysis of the audience gender balance](gender-balance-audience.md)
+
+&rarr; Look at [our analysis of the speaker gender balance](gender-balance-speakers.md)
+
