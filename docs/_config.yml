@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
 title: GeoBeer Analytics
-description: A one-pager about analytics of GeoBeer events. Hopefully useful also to other meetup and event organisers.
+description: A collection of analytics about GeoBeer events, including the tools to produce them. Hopefully useful also to other meetup and event organisers.
 logo: assets/logo-geobeer.png
 plugins:
   - jekyll-relative-links
