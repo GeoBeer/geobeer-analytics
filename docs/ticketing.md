@@ -7,7 +7,7 @@ Based on event registration data from the [Ti.to](http://ti.to)-platform, we ana
 
 - Local organisers sometimes re-up the ticket quota when it's, nearly or completely, depleted. We can't systematically track when this occurs with reasonable effort. 
 
-- A certain proportion of ticket holders cancel. When this happens, we offer the ticket to the next person on the waiting list. When this person registers for the ticket (sometimes only days or even hours ahead of the event), that timestamp goes into our ticketing data. 
+- A certain proportion of ticket holders cancel. When this happens, we offer the respective ticket to the next person on the waiting list. When this person registers for the ticket (sometimes only days or even hours ahead of the event), that timestamp goes into our ticketing data. 
 
 Both these issues would affect the complete analysis in a way that would strongly overestimate the time until tickets are gone.
 
