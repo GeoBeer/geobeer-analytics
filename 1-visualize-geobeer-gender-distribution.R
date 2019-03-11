@@ -14,6 +14,10 @@ if (!require(readr)) {
   install.packages('readr')
   require(readr)
 }
+if (!require(stringr)) {
+  install.packages('stringr')
+  require(stringr)
+}
 source(here('functions.R'))
 
 
@@ -90,12 +94,18 @@ ggplot(data, aes(x=event_numeric, y=percentage, fill=gender)) +
   geom_bar(stat='identity') + 
   scale_fill_manual(values=c('#86D8FC', '#F9D84F')) + 
   geom_hline(yintercept=overall$percentage[overall$gender=='female']) +
+  annotate("text", x = 12, 
+           y = overall$percentage[overall$gender=='female'] + 6.5, 
+           label = str_c('This line represents\nthe overall female\nparticipation rate\nwhich is at ', 
+                         round(overall$percentage[overall$gender=='female'], 1), 
+                         '%.'),
+           lineheight=0.9, size = rel(2.5), fontface='plain', colour = 'black') +
   theme_geobeer_verbar() +
   theme(legend.position='right') +
   labs(title='Gender balance per GeoBeer event', 
        subtitle='\nWhat were the proportions of female and male participants per GeoBeer event?\n', 
        caption=str_c('\n\n@geobeerch, geobeer.github.io/geobeer-analytics\n\n',
-                     'Based on ', nrow(data_per_event), ' events. The line represents\nthe overall female participation rate.'),
+                     'Based on ', nrow(data_per_event), ' events.'),
        x='\nEvent',
        y='Proportion of participants [%]\n')
 ggsave(here('Results', 'GeoBeer-gender-balance--relative--per-event.png'), 
