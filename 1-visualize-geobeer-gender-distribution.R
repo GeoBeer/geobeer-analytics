@@ -133,6 +133,12 @@ ggsave(here('Results', 'GeoBeer-gender-balance--relative--left-right--per-event.
        width=25, height=25, units='cm')
 
 
+# The analysis of correlation shows that event size does not correlate significantly with 
+# the percentage of female audience members.
+
+# library(Hmisc)
+# rcorr(data_per_event$count, data_per_event$female_percentage, type="pearson")
+
 # Scatterplot of percentage of female participants versus absolute event size
 ggplot(data_per_event, aes(x=count, y=female_percentage)) +
   geom_smooth(method=lm, color='#999999') +
