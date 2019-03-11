@@ -141,11 +141,11 @@ ggsave(here('Results', 'GeoBeer-gender-balance--relative--left-right--per-event.
 
 # Scatterplot of percentage of female participants versus absolute event size
 ggplot(data_per_event, aes(x=count, y=female_percentage)) +
-  geom_smooth(method=lm, color='#999999') +
+  #geom_smooth(method=lm, color='#999999') +
   geom_point(color='#4CA3C3', size=3) + 
   theme_geobeer() +
-  labs(title='Size of GeoBeer events and gender balance', 
-       subtitle='\nDo bigger GeoBeer events lead to a more balanced gender representation?', 
+  labs(title='Size of GeoBeer events and gender balance:\nNo correlation', 
+       subtitle='\nCorrelation analysis shows: The size of GeoBeer events is not correlated with gender representation', 
        caption=str_c('\n\n@geobeerch, geobeer.github.io/geobeer-analytics\n\n',
                      'Based on ', nrow(data_per_event), ' events.'),
        x='\nSize of event (number of participants)',
