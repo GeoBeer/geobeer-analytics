@@ -26,7 +26,7 @@ If you do similar analyses for your event, please let us know. We'd [like to tal
 
 # Tools and data
 
-We open as many of our tools and data sets as possible. Our tools are programmed in R. For code, have a look at the files in https://github.com/GeoBeer/geobeer-analytics. For data (and figures) that could serve as a benchmark for your own analyses, have a look at the files in https://github.com/GeoBeer/geobeer-analytics/Results.
+We open as many of our tools and data sets as possible. Our tools are programmed in R. For code, have a look at the files in [github.com/GeoBeer/geobeer-analytics](https://github.com/GeoBeer/geobeer-analytics). For data (and figures) that could serve as a benchmark for your own analyses, have a look at the files in [github.com/GeoBeer/geobeer-analytics/Results](https://github.com/GeoBeer/geobeer-analytics/Results).
 
 [Let us know if you have questions](mailto:mail@geobeer.ch).
 
