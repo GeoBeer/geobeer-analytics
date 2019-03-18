@@ -9,7 +9,7 @@ We want to make GeoBeer events better events by holding up these principles (and
 
 Against this background, we sometimes discuss questions of openness, representation, and diversity within our team and with some of our sponsors, organisers, and audience members. Questions of representation pertain to many characteristics of humans, of course. For example, age, nationality, gender, path of education, language, sexual orientation, race, and many more. Here, we derive some data on representation by looking at gender balance of the GeoBeer speakers to date. 
 
-We used to not have any written restrictions or preferences regarding speakers out our events. As we have grown more and more aware about the afore-mentioned topics, we have included a clause in our dossier for local organisers that stipulates (but doesn't enforce) more representation of women. 
+We used to not have any written restrictions or preferences regarding speakers at our events. As we have grown more and more aware (and concerned) about the afore-mentioned topics, we have included a clause in our dossier for local organisers that stipulates (but doesn't enforce) more representation of women. 
 
 If you want to know more, please read about our reasoning about diversity and gender on our page about the [gender balance of our audience](gender-balance-audience.md).
 
