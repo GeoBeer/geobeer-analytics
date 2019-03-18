@@ -1,3 +1,12 @@
+# ----------------------------------------------------------------------------------------
+# Authors:      GeoBeer Team, @geobeer_ch
+# Created:      2019-03
+# License:      GNU General Public License v3.0
+# Repository:   https://github.com/GeoBeer/geobeer-analytics
+# More info:    https://geobeer.github.io/geobeer-analytics, http://www.geobeer.ch
+# ----------------------------------------------------------------------------------------
+
+
 if (!require(here)) {
   install.packages('here')
   require(here)
@@ -141,5 +150,5 @@ write_csv(gender_stats_data, here('Results', 'tito-gender-stats.csv'))
 tito_data <- gender_stats_data
 eventbrite_data <- read_csv(here('Results', 'eventbrite-gender-stats.csv'))
 data <- rbind(as.data.frame(eventbrite_data), as.data.frame(tito_data))
-write_csv(data, here('Results', 'geobeer-gender-stats.csv'))
+write_csv(data, here('Results', 'geobeer-audience-gender-stats.csv'))
 
