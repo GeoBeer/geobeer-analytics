@@ -1,3 +1,12 @@
+# ----------------------------------------------------------------------------------------
+# Authors:      GeoBeer Team, @geobeer_ch
+# Created:      2019-03
+# License:      GNU General Public License v3.0
+# Repository:   https://github.com/GeoBeer/geobeer-analytics
+# More info:    https://geobeer.github.io/geobeer-analytics, http://www.geobeer.ch
+# ----------------------------------------------------------------------------------------
+
+
 if (!require(here)) {
   install.packages('here')
   require(here)
