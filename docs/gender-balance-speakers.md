@@ -23,4 +23,3 @@ In GeoBeers #1 (in 2013) through #26, we have had a total of 64 talks (including
 &rarr; Look at [our analysis of the ticketing process](ticketing.md)
 
 &rarr; Look at [our analysis of the audience gender balance](gender-balance-audience.md)
-
