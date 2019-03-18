@@ -22,11 +22,11 @@ Check out some of our findings:
 
 &rarr; Look at [our analysis of the speaker gender balance](gender-balance-speakers.md)
 
-If you do similar analyses for your event, please let us know. We'd [like to talk](mailto:mail@geobeer.ch).
+If you do similar analyses for your event, [please let us know](mailto:mail@geobeer.ch). We'd like to talk.
 
 # Tools and data
 
-We open as many of our tools and data sets as possible. Our tools are programmed in R. For code, have a look at the files in [github.com/GeoBeer/geobeer-analytics](https://github.com/GeoBeer/geobeer-analytics). For data (and figures) that could serve as a benchmark for your own analyses, have a look at the files in [github.com/GeoBeer/geobeer-analytics/Results](https://github.com/GeoBeer/geobeer-analytics/Results).
+We open as many of our tools and data sets as possible. Our tools are programmed in R. For code, have a look at the files in [github.com/GeoBeer/geobeer-analytics](https://github.com/GeoBeer/geobeer-analytics). For data (and figures) that could serve as a benchmark for your own analyses, have a look at the files in [github.com/GeoBeer/geobeer-analytics/tree/master/Results](https://github.com/GeoBeer/geobeer-analytics/tree/master/Results).
 
 [Let us know if you have questions](mailto:mail@geobeer.ch).
 
