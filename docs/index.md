@@ -10,7 +10,7 @@ While we open our tools and some of our data, we withhold all data that is priva
 
 &rarr; [Read more about GeoBeer](about.md)
 
-# Analytics
+# Analyses
 
 Check out some of our findings:
 
@@ -22,7 +22,13 @@ Check out some of our findings:
 
 &rarr; Look at [our analysis of the speaker gender balance](gender-balance-speakers.md)
 
-If you do similar analyses for your event, please let us know. We'd [like to talk](mailto:mail@geobeer.ch) and share data and methods for benchmarking.
+If you do similar analyses for your event, please let us know. We'd [like to talk](mailto:mail@geobeer.ch).
+
+# Analytics and data
+
+We open as many of our tools and data sets as possible. For code, have a look at the files in https://github.com/GeoBeer/geobeer-analytics. For data (and figures) that could serve as benchmark for your own analyses, have a look at the files in https://github.com/GeoBeer/geobeer-analytics/Results.
+
+[Let us know if you have questions](mailto:mail@geobeer.ch).
 
 Anne, Stephan, and Ralph
 
