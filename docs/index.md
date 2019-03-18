@@ -24,9 +24,9 @@ Check out some of our findings:
 
 If you do similar analyses for your event, please let us know. We'd [like to talk](mailto:mail@geobeer.ch).
 
-# Analytics and data
+# Tools and data
 
-We open as many of our tools and data sets as possible. For code, have a look at the files in https://github.com/GeoBeer/geobeer-analytics. For data (and figures) that could serve as benchmark for your own analyses, have a look at the files in https://github.com/GeoBeer/geobeer-analytics/Results.
+We open as many of our tools and data sets as possible. Our tools are programmed in R. For code, have a look at the files in https://github.com/GeoBeer/geobeer-analytics. For data (and figures) that could serve as a benchmark for your own analyses, have a look at the files in https://github.com/GeoBeer/geobeer-analytics/Results.
 
 [Let us know if you have questions](mailto:mail@geobeer.ch).
 
