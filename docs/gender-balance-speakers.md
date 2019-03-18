@@ -14,7 +14,7 @@ We used to not have any written restrictions or preferences regarding speakers a
 If you want to know more, please read about our reasoning about diversity and gender on our page about the [gender balance of our audience](gender-balance-audience.md).
 
 ## Results
-In GeoBeers #1 (in 2013) through #26, we have had a total of 64 talks (including technical contributions such as demos, but excluding welcome notes). Out of these talks, 11 were held by women and 53 were held by men. This puts the gender balance at 17% presentations by women and 83% by men.
+In GeoBeers #1 (in 2013) through #26, we have had a total of 64 talks (including technical contributions such as demos, but excluding welcome notes). **Out of these talks, 11 were held by women and 53 were held by men. This puts the gender balance at 17% presentations by women and 83% by men**.
 
 &larr; [Back to the main page](index.md)
 
