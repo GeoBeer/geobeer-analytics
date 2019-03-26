@@ -11,10 +11,6 @@ if (!require(lubridate)) {
   install.packages('lubridate')
   require(lubridate)
 }
-if (!require(here)) {
-  install.packages('here')
-  require(here)
-}
 if (!require(tidyverse)) {
   install.packages('tidyverse')
   require(tidyverse)
@@ -27,7 +23,11 @@ if (!require(readr)) {
   install.packages('readr')
   require(readr)
 }
-source(here('functions.R'))
+if (!require(here)) {
+  install.packages('here')
+  require(here)
+}
+source(here("functions.R"))
 
 
 # Ingest data ------------------------------------------------------------------
