@@ -67,7 +67,7 @@ data %<>%
          first_registration, median_registration, last_registration)
 
 
-ggplot(data, aes(x=event, y=duration_median_hours)) +
+ggplot(data, aes(x=event_short, y=duration_median_hours)) +
   geom_bar(stat='identity', fill='#4CA3C3') + 
   theme_geobeer_verbar() +
   theme(legend.position='none') +
