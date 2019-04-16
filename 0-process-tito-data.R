@@ -152,3 +152,7 @@ eventbrite_data <- read_csv(here('Results', 'eventbrite-gender-stats.csv'))
 data <- rbind(as.data.frame(eventbrite_data), as.data.frame(tito_data))
 write_csv(data, here('Results', 'geobeer-audience-gender-stats.csv'))
 
+# Find records that have no associated gender yet
+aggregated_data %>%
+  filter(is.na(gender)) %>%
+  select(event, fullname, firstname, lastname)
