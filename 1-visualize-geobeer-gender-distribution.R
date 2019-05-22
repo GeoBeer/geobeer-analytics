@@ -34,7 +34,7 @@ source(here('functions.R'))
 
 # Read and combine the (preprocessed) data on Eventbrite events and on Tito 
 # events 
-data <- read_csv(here('Results', 'geobeer-gender-stats.csv'))
+data <- read_csv(here('Results', 'geobeer-audience-gender-stats.csv'))
 
 # Do some minor data enrichment and restructuring ------------------------------
 
