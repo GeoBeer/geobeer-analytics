@@ -34,7 +34,7 @@ source(here('functions.R'))
 
 # Read and combine the (preprocessed) data on the #SwissGIS Twitter list
 swissgis_data <- read_csv(here('Results', 'swissgis-gender-stats.csv'))
-geobeer_data <- read_csv(here('Results', 'geobeer-gender-stats.csv'))
+geobeer_data <- read_csv(here('Results', 'geobeer-audience-gender-stats.csv'))
 geowebforum_author_data <- 
   read_csv(here('Results', 'geowebforum-author-gender-stats.csv'))
 geowebforum_post_data <- 
