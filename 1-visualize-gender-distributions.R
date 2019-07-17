@@ -39,6 +39,7 @@ geowebforum_author_data <-
   read_csv(here('Results', 'geowebforum-author-gender-stats.csv'))
 geowebforum_post_data <- 
   read_csv(here('Results', 'geowebforum-post-gender-stats.csv'))
+reddit_data <- read_csv(here('Auxiliary-Data', 'Additional-Gender-Statistics.csv'))
 
 
 # Do some minor data enrichment and restructuring ------------------------------
@@ -61,14 +62,21 @@ geowebforum_author_data %<>%
 geowebforum_post_data %<>%
   mutate(source='Geowebforum authors, weighted by number of posts written')
 
+# Drop some attributes of the Reddit data
+reddit_data %<>%
+  select(source, gender, count, percentage)
 
-data <- rbind(geobeer_data, swissgis_data, geowebforum_author_data, 
+
+data <- rbind(geobeer_data, swissgis_data, reddit_data, geowebforum_author_data, 
               geowebforum_post_data)
 data <- data[c('source', 'gender', 'count', 'percentage')]
 write_csv(data, here('Results', 'gender-stats.csv'))
 
 data$source[data$source == 'Geowebforum authors, weighted by number of posts written'] <- 
   'Geowebforum authors,\nweighted by number\nof posts written'
+
+data$source[data$source == 'User survey 2019 of reddit.com/r/gis'] <- 
+  'User survey 2019\nof reddit.com/r/gis'
 
 # Make <data$gender> a factor. The order of factor levels determines the  
 # drawing order in ggplot bar plots (later factor levels are drawn first). 
@@ -78,8 +86,9 @@ data$gender <- factor(data$gender, levels=c('male', 'female'))
 # drawing order in ggplot bar plots (later factor levels are drawn first). 
 data$source <- factor(data$source, 
                       levels=c('Geowebforum authors,\nweighted by number\nof posts written',
-                               'Geowebforum authors', '#SwissGIS Twitter list', 
-                               'GeoBeer events'))
+                               'Geowebforum authors', 
+                               'User survey 2019\nof reddit.com/r/gis', 
+                               '#SwissGIS Twitter list', 'GeoBeer events'))
 
 
 # Start plotting data ----------------------------------------------------------
@@ -93,12 +102,12 @@ ggplot(data, aes(x=source, y=percentage, fill=gender)) +
   #geom_hline(yintercept=overall$percentage[overall$gender=='female']) +
   theme_geobeer_horbar() +
   coord_flip() +
-  labs(title='Gender balances in GIS in Switzerland', 
+  labs(title='Gender balances in GIS in Switzerland\nand benchmarks', 
        subtitle='\nWhat are the proportions of female and male representation in different channels?', 
        caption=str_c('\n\n@geobeerch, geobeer.github.io/geobeer-analytics\n\n',
                      'Based on GeoBeer data, the #SwissGIS list at twitter.com/rastrau/lists/swissgis,\n',
-                     'and data about geowebforum.ch via github.com/rastrau/geowebforum-scraper.'),
+                     'Reddit data and data about geowebforum.ch via github.com/rastrau/geowebforum-scraper.'),
        x='',
        y='\nProportion of participants/accounts [%]')
-ggsave(here('Results', 'Gender-balances--relative.png'), width=25, height=16, 
+ggsave(here('Results', 'Gender-balances--relative.png'), width=25, height=17, 
             units='cm')
