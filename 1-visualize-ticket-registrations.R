@@ -27,12 +27,13 @@ if (!require(here)) {
   install.packages('here')
   require(here)
 }
-source(here("functions.R"))
+source(here::here("functions.R"))
 
 
 # Ingest data ------------------------------------------------------------------
 
-data <- read_csv(here('..', 'geobeer-private-data', 'Tito', 'tito-aggregated-data.csv'))
+data <- read_csv(here::here('..', 'geobeer-private-data', 'Tito', 
+                            'tito-aggregated-data.csv'))
 
 # Do some minor data enrichment and restructuring ------------------------------
 
@@ -78,6 +79,6 @@ ggplot(data, aes(x=event_short, y=duration_median_hours)) +
        caption='\n\n@geobeerch, geobeer.github.io/geobeer-analytics',
        x='\nEvent',
        y='Hours\n')
-ggsave(here('Results', 'GeoBeer-ticket-registration-times--per-event.png'), 
+ggsave(here::here('Results', 'GeoBeer-ticket-registration-times--per-event.png'), 
        width=25, height=18, units='cm')
 
