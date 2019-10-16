@@ -97,7 +97,6 @@ data <- rbind(r, s, t)
 # Remove temporary data
 rm(r)
 rm(s)
-not_automatically_classifiable <- t
 rm(t)
 
 # There are still records that haven't been assigned a gender. For these, 
@@ -134,9 +133,16 @@ rm(gender_data)
 # Classify the additional names using a manually curated firstname > gender list
 aggregated_data <- classify_additional_names(aggregated_data)
 
+
 # Save resulting data to disks
 write_csv(aggregated_data, here('..', 'geobeer-private-data', 'Tito', 
                                 'tito-aggregated-data.csv'))
+
+# Extract names for which a gender classification needs to be assigned manually, by 
+# adding records to ..\geobeer-private-data\Auxiliary-Data\Additional-Names.csv
+not_automatically_classifiable <- aggregated_data %>%
+  filter(is.na(gender))
+
 
 # Analyse gender by event and save to disk
 gender_stats_data <- aggregated_data %>%
