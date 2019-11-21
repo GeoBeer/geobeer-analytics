@@ -1,6 +1,8 @@
 # Event locations
 
-(to come)
+Local organiser can contact us to organise GeoBeer all over Switzerland.
+
+Since the initation of GeoBeer in 2013, we have visited a number of places. Check out the [map of our previous event locations throughout Switzerland](geobeer-map/index.html).
 
 &larr; [Back to the main page](index.md)
 
