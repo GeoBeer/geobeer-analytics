@@ -2,7 +2,9 @@
 
 GeoBeer sponsors can contact us to organise GeoBeer events all over Switzerland.
 
-Since the initation of GeoBeer in 2013, we have visited a number of places. Check out the [map of our previous event locations throughout Switzerland](geobeer-map/index.html).
+Since the initation of GeoBeer in 2013, we have visited a number of places. Check out the big [map of our previous event locations throughout Switzerland](geobeer-map/index.html) &ndash; or, if you prefer the Federal Geoportal:
+
+<iframe src='https://map.geo.admin.ch/?topic=ech&lang=en&bgLayer=ch.swisstopo.pixelkarte-farbe&layers=KML%7C%7Chttps:%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F147EUgQlkZykvrugKRFxBrl-2dDveW5RDU346TLZKies%2Fexport%3Fformat%3Dtsv%26gid%3D741518437' width='100%' height='300px' frameborder='0' style='border:0'></iframe>
 
 &larr; [Back to the main page](index.md)
 
