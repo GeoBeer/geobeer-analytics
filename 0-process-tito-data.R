@@ -29,6 +29,7 @@ if (!require(gender)) {
 }
 if (!require(genderdata)) {
   install.packages('genderdata')
+  # Alternative: install.packages("genderdata", repo = "http://packages.ropensci.org", type = "source")
   require(genderdata)
 }
 source(here('functions.R'))
@@ -162,3 +163,4 @@ write_csv(data, here('Results', 'geobeer-audience-gender-stats.csv'))
 aggregated_data %>%
   filter(is.na(gender)) %>%
   select(event, fullname, firstname, lastname)
+
