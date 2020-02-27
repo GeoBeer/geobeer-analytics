@@ -31,7 +31,7 @@ if (!require(stringr)) {
 
 # Ingest data ------------------------------------------------------------------
 
-data <- read_csv(here("..", "geobeer-private-data", "GeoBeer-Speakers.csv"))
+data <- read_csv(here::here("..", "geobeer-private-data", "GeoBeer-Speakers.csv"))
 
 # Do some minor data enrichment and restructuring ------------------------------
 
@@ -45,7 +45,7 @@ gender_stats_data <- data %>%
   summarise(count = n()) %>%
   mutate(percentage = count / sum(count) * 100)
 
-write_csv(gender_stats_data, here("Results", "geobeer-speakers-gender-stats.csv"))
+write_csv(gender_stats_data, here::here("Results", "geobeer-speakers-gender-stats.csv"))
 
 
 aggregated_data <- data %>%
@@ -93,18 +93,18 @@ footer <- "&larr; [Back to the main page](index.md)
 
 max_geobeer <- max(as.numeric(str_replace(data$event, "GeoBeer #", "")))
 
-cat(text, file = here("docs", "gender-balance-speakers.md"))
-cat(max_geobeer, file = here("docs", "gender-balance-speakers.md"), append = TRUE)
-cat(", we have had a total of ", file = here("docs", "gender-balance-speakers.md"), append = TRUE)
-cat(sum(aggregated_data$count), file = here("docs", "gender-balance-speakers.md"), append = TRUE)
-cat(" talks (including technical contributions such as demos, but excluding welcome notes). **Out of these talks, ", file = here("docs", "gender-balance-speakers.md"), append = TRUE)
-cat(aggregated_data$count[aggregated_data$gender == "female"], file = here("docs", "gender-balance-speakers.md"), append = TRUE)
-cat(" were held by women and ", file = here("docs", "gender-balance-speakers.md"), append = TRUE)
-cat(aggregated_data$count[aggregated_data$gender == "male"], file = here("docs", "gender-balance-speakers.md"), append = TRUE)
-cat(" were held by men. This puts the gender balance at ", file = here("docs", "gender-balance-speakers.md"), append = TRUE)
-cat(female_percentage, file = here("docs", "gender-balance-speakers.md"), append = TRUE)
-cat("% presentations by women and ", file = here("docs", "gender-balance-speakers.md"), append = TRUE)
-cat(male_percentage, file = here("docs", "gender-balance-speakers.md"), append = TRUE)
-cat("% by men**.\n\n", file = here("docs", "gender-balance-speakers.md"), append = TRUE)
-cat(footer, file = here("docs", "gender-balance-speakers.md"), append = TRUE)
+cat(text, file = here::here("docs", "gender-balance-speakers.md"))
+cat(max_geobeer, file = here::here("docs", "gender-balance-speakers.md"), append = TRUE)
+cat(", we have had a total of ", file = here::here("docs", "gender-balance-speakers.md"), append = TRUE)
+cat(sum(aggregated_data$count), file = here::here("docs", "gender-balance-speakers.md"), append = TRUE)
+cat(" talks (including technical contributions such as demos, but excluding welcome notes). **Out of these talks, ", file = here::here("docs", "gender-balance-speakers.md"), append = TRUE)
+cat(aggregated_data$count[aggregated_data$gender == "female"], file = here::here("docs", "gender-balance-speakers.md"), append = TRUE)
+cat(" were held by women and ", file = here::here("docs", "gender-balance-speakers.md"), append = TRUE)
+cat(aggregated_data$count[aggregated_data$gender == "male"], file = here::here("docs", "gender-balance-speakers.md"), append = TRUE)
+cat(" were held by men. This puts the gender balance at ", file = here::here("docs", "gender-balance-speakers.md"), append = TRUE)
+cat(female_percentage, file = here::here("docs", "gender-balance-speakers.md"), append = TRUE)
+cat("% presentations by women and ", file = here::here("docs", "gender-balance-speakers.md"), append = TRUE)
+cat(male_percentage, file = here::here("docs", "gender-balance-speakers.md"), append = TRUE)
+cat("% by men**.\n\n", file = here::here("docs", "gender-balance-speakers.md"), append = TRUE)
+cat(footer, file = here::here("docs", "gender-balance-speakers.md"), append = TRUE)
 
