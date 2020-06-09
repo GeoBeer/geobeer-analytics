@@ -39,7 +39,7 @@ geowebforum_author_data <-
   read_csv(here('Results', 'geowebforum-author-gender-stats.csv'))
 geowebforum_post_data <- 
   read_csv(here('Results', 'geowebforum-post-gender-stats.csv'))
-reddit_data <- read_csv(here('Auxiliary-Data', 'Additional-Gender-Statistics.csv'))
+aux_data <- read_csv(here('Auxiliary-Data', 'Additional-Gender-Statistics.csv'))
 
 
 # Do some minor data enrichment and restructuring ------------------------------
@@ -63,11 +63,11 @@ geowebforum_post_data %<>%
   mutate(source='Geowebforum authors, weighted by number of posts written')
 
 # Drop some attributes of the Reddit data
-reddit_data %<>%
+aux_data %<>%
   select(source, gender, count, percentage)
 
 
-data <- rbind(geobeer_data, swissgis_data, reddit_data, geowebforum_author_data, 
+data <- rbind(geobeer_data, swissgis_data, aux_data, geowebforum_author_data, 
               geowebforum_post_data)
 data <- data[c('source', 'gender', 'count', 'percentage')]
 write_csv(data, here('Results', 'gender-stats.csv'))
@@ -77,6 +77,10 @@ data$source[data$source == 'Geowebforum authors, weighted by number of posts wri
 
 data$source[data$source == 'User survey 2019 of reddit.com/r/gis'] <- 
   'User survey 2019\nof reddit.com/r/gis'
+
+data$source[data$source == 'American Association of Geographers (AAG) members 2018'] <- 
+  'American Association\nof Geographers (AAG)\nmembers 2018'
+
 
 # Make <data$gender> a factor. The order of factor levels determines the  
 # drawing order in ggplot bar plots (later factor levels are drawn first). 
@@ -88,6 +92,7 @@ data$source <- factor(data$source,
                       levels=c('Geowebforum authors,\nweighted by number\nof posts written',
                                'Geowebforum authors', 
                                'User survey 2019\nof reddit.com/r/gis', 
+                               'American Association\nof Geographers (AAG)\nmembers 2018',
                                '#SwissGIS Twitter list', 'GeoBeer events'))
 
 
