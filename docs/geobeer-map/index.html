@@ -3,13 +3,15 @@
 <head>
 	<title>GeoBeer Map</title>
 
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="" />
-	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js" integrity="sha512-WXoSHqw/t26DszhdMhOXOkI7qCiv5QWXhH9R7CgvgZMHz1ImlkVQ3uNsiQKu5wwbbxtPzFXd1hK4tzno2VqhpA==" crossorigin=""></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="mobile.css" />
 
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha384-eS4bw6aEvhCSXWGP85ANR/N8isWKzT7P36NvcuTJGkrj6wsbxLVpXslrNXYHyseD" crossorigin>
+	<link rel="stylesheet" href="mobile.css" />
 	<link rel="stylesheet" href="css/MarkerCluster.css" />
 	<link rel="stylesheet" href="css/MarkerCluster.Default.css" />
+
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha384-wKOriz2x8/bF1D9t6PuKhSpxfhHeVi9huvyuxJrrShSJpi5+rmRIsM90UuWbdAYJ" crossorigin></script>
+	<script src="https://unpkg.com/leaflet-tilelayer-swiss@2.1.0/dist/Leaflet.TileLayer.Swiss.umd.js" integrity="sha384-ylX6gm5jl451O0/PN7zKJp+CAJwSvVRu+GmV/Vep3h64jtcCmBs1hLH0LGB+oORb" crossorigin></script>
 	<script src="dist/leaflet.markercluster-src.js"></script>
 	<script src="leaflet.ajax.min.js"></script>
 </head>
@@ -19,13 +21,13 @@
 
 	<script type="text/javascript">
 
-		var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-				maxZoom: 18,
-				attribution: 'Basemap &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors, Points &copy; <a href="https://www.geobeer.ch">GeoBeer</a>'
-			}),
-			latlng = L.latLng(46.8, 8.3);
+		var tiles = L.tileLayer.swiss({
+			attribution: 'Basemap &copy; <a href="https://www.swisstopo.ch/" target="_blank">Swisstopo</a>, Points &copy; <a href="https://www.geobeer.ch">GeoBeer</a>',
+			layer: 'ch.swisstopo.pixelkarte-grau'
+		}),
+		latlng = L.latLng(46.8, 8.3);
 
-		var map = L.map('map', {center: latlng, zoom: 8, layers: [tiles]});
+		var map = L.map('map', {crs: L.CRS.EPSG2056, center: latlng, zoom: 8, layers: [tiles]});
 
 		var LeafIcon = L.Icon.extend({
 			options: {
@@ -42,36 +44,31 @@
 		})
 
 		L.icon = function (options) {
-		    return new L.Icon(options);
+			return new L.Icon(options);
 		};
 
 
-				// var markers = L.markerClusterGroup();
-
-				var markers = L.markerClusterGroup({
-					iconCreateFunction: function(cluster) {
-						return L.divIcon({ html: '<b>' + cluster.getChildCount() + '</b>', className: 'geobeer-cluster' });
-					}
-				});
+		var markers = L.markerClusterGroup({
+			iconCreateFunction: function(cluster) {
+				return L.divIcon({ html: '<b>' + cluster.getChildCount() + '</b>', className: 'geobeer-cluster' });
+			}
+		});
 
 		var geojsonLayer = new L.GeoJSON.AJAX("https://raw.githubusercontent.com/GeoBeer/geobeer-analytics/master/Auxiliary-Data/Events.geojson", {
-				pointToLayer: function(geoJsonPoint, latlng) {
-					return L.marker(latlng, {icon: geobeerIcon});
-				},
-				onEachFeature: function (feature, layer) {
-					var popupText = '<b>' + feature.properties.event + '</b><br>';
-					var popupText = popupText + feature.properties.location + '<br>';
-					var popupText = popupText + '<a href="http://geobeer.ch/geobeer-' + feature.properties.event_numeric + '.html">Event review</a>';
-					layer.bindPopup(popupText);
-					// pointToLayer: function (feature, latlng){
-	        //return L.marker(latlng, {icon: redIcon});
-
-				},
-				markersInheritOptions: true
+			pointToLayer: function(geoJsonPoint, latlng) {
+				return L.marker(latlng, {icon: geobeerIcon});
+			},
+			onEachFeature: function (feature, layer) {
+				var popupText = '<b>' + feature.properties.event + '</b><br>';
+				var popupText = popupText + feature.properties.location + '<br>';
+				var popupText = popupText + '<a href="https://geobeer.ch/geobeer-' + feature.properties.event_numeric + '.html">Event review</a>';
+				layer.bindPopup(popupText);
+			},
+			markersInheritOptions: true
 		});
 		geojsonLayer.on('data:loaded', function () {
-				markers.addLayer(geojsonLayer);
-				map.addLayer(markers);
+			markers.addLayer(geojsonLayer);
+			map.addLayer(markers);
 		});
 
 	</script>
