@@ -1,7 +1,7 @@
 # Gender balance of our speakers
 
 ## Background and rationale
-With GeoBeer, we want that everybody with an interest &laquo;geo&raquo; feels welcome at our events. Specifically, [our manifesto](http://geobeer.ch/manifesto.html) declares: 
+With GeoBeer, we want that everybody with an interest in &laquo;geo&raquo; feels welcome at our events. Specifically, [our manifesto](http://geobeer.ch/manifesto.html) declares: 
 - *&laquo;Networking is inclusive: Everybody adds value.&raquo;* and 
 - *&laquo;We (...) welcome everybody: all genders, creeds and colours, citizen or expat, speaking French, Italian, German, Romansh, English, Python, C# or Javascript.&raquo;*. 
 
