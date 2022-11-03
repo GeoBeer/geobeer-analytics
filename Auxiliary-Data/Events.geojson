@@ -627,6 +627,106 @@
                 "type": "Point",
                 "coordinates": [7.43808, 46.95038]
             }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "event": "GeoBeer #32",
+                "event_short": "#32",
+                "event_numeric": "32",
+                "organiser_category": "GeoBeer Team",
+                "organiser_subcategory": null,
+                "event_type": "GeoBeer",
+                "location": "online",
+                "x": "2660557",
+                "y": "1183337",
+                "lat": "46.798449",
+                "lon": "8.231879",
+                "language_region": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [8.231879, 46.798449]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "event": "GeoBeer #33",
+                "event_short": "#33",
+                "event_numeric": "33",
+                "organiser_category": "GeoBeer Team",
+                "organiser_subcategory": null,
+                "event_type": "GeoBeer",
+                "location": "online",
+                "x": "2660557",
+                "y": "1183337",
+                "lat": "46.798449",
+                "lon": "8.231879",
+                "language_region": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [8.231879, 46.798449]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "event": "GeoBeer #34",
+                "event_short": "#34",
+                "event_numeric": "34",
+                "organiser_category": "GeoBeer Team",
+                "organiser_subcategory": null,
+                "event_type": "GeoBeer",
+                "location": "online",
+                "x": "2660557",
+                "y": "1183337",
+                "lat": "46.798449",
+                "lon": "8.231879",
+                "language_region": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [8.231879, 46.798449]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "event": "GeoBeer #35",
+                "event_short": "#35",
+                "event_numeric": "35",
+                "organiser_category": "GeoBeer Team",
+                "organiser_subcategory": null,
+                "event_type": "GeoBeer",
+                "location": "online",
+                "x": "2660557",
+                "y": "1183337",
+                "lat": "46.798449",
+                "lon": "8.231879",
+                "language_region": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [8.231879, 46.798449]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "event": "GeoBeer #36",
+                "event_short": "#36",
+                "event_numeric": "36",
+                "organiser_category": "Private sector",
+                "organiser_subcategory": null,
+                "event_type": "GeoBeer",
+                "location": "Laax",
+                "x": "2739566",
+                "y": "1186534",
+                "lat": "46.81533",
+                "lon": "9.26754",
+                "language_region": "de"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [9.26754, 46.81533]
+            }
         }
     ]
 }
